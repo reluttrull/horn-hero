@@ -1,0 +1,200 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.dark-mode > * .modal-overlay {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode > * .modal-content {
+  background: rgb(43, 42, 42);
+}
+
+.dark-mode > * .console-style {
+  color:#00FF00;
+}
+
+.dark-mode > * button {
+  background-color: #1a1a1a;
+  color: white;
+}
+
+.light-mode > * .modal-overlay {
+  background: #EEEEEE;
+}
+.light-mode > * .modal-content {
+  background: #eeeeee;
+}
+  
+.light-mode > * .console-style {
+  color: green;
+}
+
+.light-mode > * a:hover {
+  color: #747bff;
+}
+
+.light-mode > * button {
+  color: black;
+}
+
+#theme-toggle {
+  float:right;
+}
+
+#tab-block {
+  padding-bottom:5px;
+}
+
+#tab-block > button {
+  margin-right: 3px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+.console-style {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.flashcard {
+  height: 1in;
+}
+
+#volume-control {
+  margin-right: 5px;
+}
+
+.study-flashcard {
+  width: 1.6in;
+}
+
+.study-fingerings {
+    position: relative;
+    padding-top: 10%;
+    padding-left: 10%;
+}
+
+.study-row {
+  padding-bottom: 10px;
+}
+
+.error-text {
+  width:100%;
+  height:auto;
+  min-height:100px;
+}
+
+.key {
+  height: 1.14in;
+  width: 1.45in;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+  padding-right:5px;
+}
+
+.question {
+  padding-right:5px;
+}
+
+.button-block {
+  width: 3in;
+}
+
+.invisible {
+  display: none;
+}
+
+.visible {
+  display: inline;
+}
+
+.leaderboard {
+  min-width: 2.5in;
+}
+
+.leaderboard-cell {
+  white-space: nowrap;
+}
+
+button > span {
+  touch-action: none;
+}
+
+#valve-control {
+  height: 4.56in;
+  width: 1.45in;
+  float: left;
+  background-color: red;
+  touch-action: none;
+}
+
+#pitch-control {
+  height: 400px;
+  width: 1.45in;
+  float: right;
+  background: linear-gradient(to top, #0000ff 0%, #6300ef 50%, #8600d3 66.67%, #9b00bc 75%, 
+    #aa00a9 80%, #b6009b 83.33%, #c0008f 85.71%, #c90084 87.5%, 
+    #d10079 88.89%, #d9006f 90%, #e10065 90.91%, #e90059 91.67%,
+    #f0004d 92.31%, #f8003d 92.86%, #ff0025 93.33%, #ff0000 93.75%);
+  touch-action: none;
+}
