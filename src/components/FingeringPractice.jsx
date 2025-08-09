@@ -43,7 +43,7 @@ export const FingeringPractice = () => {
   // Create a synth instance
   const customContext = new Tone.Context({ latencyHint: "playback" });
   Tone.setContext(customContext);
-  const myVol = new Tone.Volume();
+  const myVol = new Tone.Volume(-10);
   const [synth, setSynth] = useState(new Tone.Synth().toDestination({ volume: myVol }));
 
   // horn key ids
@@ -194,7 +194,6 @@ export const FingeringPractice = () => {
     }
     //move on to next card
 		currentCard.current = parseInt(Math.random() * fingerings.length);
-    console.log(currentCard.current);
     // gather user's possible notes to draw from
     // probably need to pull this out and only perform once
     let baseNotes = range == Ranges.ONEOCTAVE ? oneOctave : twoOctaves;
@@ -333,9 +332,8 @@ export const FingeringPractice = () => {
   const startNote = (event) => {
     setPitchCoordinates(event);
     currentFreq = getBaseFrequency() * getHarmonicSeriesIndex(pitchY);
-    console.log('freq ' + currentFreq);
     if (synth && pitchY > 0) {
-      console.log("synth play " + pitchY + ', ' + getHarmonicSeriesIndex(pitchY))
+      //console.log("synth play " + pitchY + ', ' + getHarmonicSeriesIndex(pitchY))
       synth.triggerAttack(currentFreq); // Start playing a note
     }
   }
@@ -350,7 +348,6 @@ export const FingeringPractice = () => {
   }
   
   const endNote = (event) => {
-    console.log(synth);
     if (synth) {
       synth.triggerRelease(); // Start playing a note
     }
