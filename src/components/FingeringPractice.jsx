@@ -334,7 +334,7 @@ export const FingeringPractice = () => {
     currentFreq = getBaseFrequency() * getHarmonicSeriesIndex(pitchY);
     if (synth && pitchY > 0) {
       //console.log("synth play " + pitchY + ', ' + getHarmonicSeriesIndex(pitchY))
-      synth.triggerAttack(currentFreq); // Start playing a note
+      synth.triggerAttack(currentFreq, '+0.05'); // Start playing a note
     }
   }
 
